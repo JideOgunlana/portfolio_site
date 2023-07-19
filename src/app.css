@@ -22,6 +22,8 @@ h2 {
     display: flex;
     flex-direction: column;
     row-gap: 100px;
+    width: 75%;
+    margin: 0 auto;
 }
 
 header {
@@ -42,10 +44,26 @@ button {
     border: 1px solid var(--custom-blue);
     background-color: var(--custom-blue);
     cursor: pointer;
+    transition: 0.6s;
+
+}
+
+button:hover {
+    background-color: var(--custom-black);
+    color: var(--custom-blue);
+    box-shadow: 4px 4px var(--custom-blue);
+    transition: 0.3s;
 }
 
 footer {
     /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
+}
+
+
+@media screen and (min-width: 1400px) {
+    .app-container {
+        max-width: 1400px;
+    }
 }

@@ -1,6 +1,15 @@
 import React from "react";
 import Card from "../../components/Card/Card";
 import "./main.css";
+import me from "../../assets/images/me.png";
+import imgC from "../../assets/images/c.png";
+import imgJS from "../../assets/images/js.png";
+import imgHTML from "../../assets/images/html-5.png";
+import imgSoLong from "../../assets/images/map02.png";
+import imgPushSwap from "../../assets/images/push_swap.png";
+import imgAgeCalc from "../../assets/images/age_calculator.jpg";
+import imgAoc from "../../assets/images/aoc.png";
+
 
 const Main = () => {
     return (
@@ -16,8 +25,11 @@ const Main = () => {
                     <button>View Projects</button>
                 </div>
             </div>
-            <div className="col">
-                <Card content={"This should have some info about me"} />
+            <div className="col image-card">
+                <Card 
+                title={""} 
+                content={"This is some info about me"}
+                source={me} />
             </div>
             <div>
                 <h2>
@@ -25,16 +37,48 @@ const Main = () => {
                 </h2>
             </div>
             <div className="featured-projects">
-                <Card content="so_long"/>
-                <Card content="so_long"/>
-                <Card content="so_long"/>
-                <Card content="so_long"/>
+                <Card title="So_Long" 
+                    content={"A top-down 2D game written in C"} 
+                    source={imgSoLong}
+                />
+                <Card title="Push_Swap" 
+                    content={"A sorting algroithm project having limited instructions"} 
+                    source={imgPushSwap}
+                />
+                <Card title="Age Calculator app" 
+                    content={"A React app to calculate age"} 
+                    source={imgAgeCalc}
+                />
+                <Card title="Advent of code in React" 
+                    content={"An algorithm coding challenge written in React"} 
+                    source={imgAoc}
+                />
             </div>
-            <div className="contact-icon">
-                Icon
+            <div className="technologies">
+                A list of some tools and languages I've used include:
+                <ul>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>Bash</li>
+                    <li>React</li>
+                </ul>
             </div>
-            <div>
-                C C++ JS
+            <div className="technologies">
+                <div className="circle">
+                    <div className="images">
+                        <img src={imgC} width={40} />
+                    </div>
+                    <div className="images">
+                        <img src={imgC} width={40} />
+                    </div>
+                    <div className="images">
+                        <img src={imgC} width={40} />
+                    </div>
+                    <div className="images">
+                        <img src={imgC} width={40} />
+                    </div>
+                </div>
             </div>
         </>
     )

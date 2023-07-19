@@ -1,0 +1,51 @@
+/* 
+    General styles
+*/
+
+body {
+    background-color: var(--custom-black);
+    color: var(--custom-white);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 900;
+}
+
+.app-container {
+    /* border: 1px solid red; */
+    /* height: 100vh; */
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+}
+
+header {
+    /* border: 1px solid green; */
+}
+
+main {
+    /* border: 1px solid orange; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+button {
+    width: 170px;
+    padding: 10px;
+    font-weight: 500;
+    border: 1px solid var(--custom-blue);
+    background-color: var(--custom-blue);
+    cursor: pointer;
+}
+
+footer {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,23 @@
+.featured-projects {
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 2;
+    gap: 20px
+}
+main button {
+    transition: 0.6s;
+}
+main button:hover {
+    background-color: var(--custom-black);
+    color: var(--custom-blue);
+    box-shadow: 4px 4px var(--custom-blue);
+    transition: 0.6s;
+}
+
+main .col {
+    padding: 40px;
+}
+
+main .col p {
+    font-weight: 200;
+}

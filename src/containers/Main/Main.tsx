@@ -5,6 +5,7 @@ import me from "../../assets/images/me.png";
 import imgC from "../../assets/images/c.png";
 import imgJS from "../../assets/images/js.png";
 import imgHTML from "../../assets/images/html-5.png";
+import imgGit from "../../assets/images/git.png";
 import imgSoLong from "../../assets/images/map02.png";
 import imgPushSwap from "../../assets/images/push_swap.png";
 import imgAgeCalc from "../../assets/images/age_calculator.jpg";
@@ -70,13 +71,13 @@ const Main = () => {
                         <img src={imgC} width={40} />
                     </div>
                     <div className="images">
-                        <img src={imgC} width={40} />
+                        <img src={imgJS} width={40} />
                     </div>
                     <div className="images">
-                        <img src={imgC} width={40} />
+                        <img src={imgHTML} width={40} />
                     </div>
                     <div className="images">
-                        <img src={imgC} width={40} />
+                        <img src={imgGit} width={40} />
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ const Main = () => {
                     <button>View Projects</button>
                 </div>
             </div>
-            <div className="col image-card">
+            <div className="col profile-image">
                 <Card 
                 title={""} 
                 content={"This is some info about me"}
@@ -51,18 +51,24 @@ const Main = () => {
                     source={imgAgeCalc}
                 />
                 <Card title="Advent of code in React" 
-                    content={"An algorithm coding challenge written in React"} 
+                    content={"An algorithm coding challenge developed in React"} 
                     source={imgAoc}
                 />
             </div>
             <div className="technologies">
-                A list of some tools and languages I've used include:
+                <h3>
+                    Tech Skills:
+                </h3>
                 <ul>
                     <li>C</li>
                     <li>C++</li>
                     <li>JavaScript</li>
-                    <li>Bash</li>
                     <li>React</li>
+                    <li>Git</li>
+                    <li>Bash</li>
+                    <li>Docker</li>
+                    <li>MariaDB</li>
+                    <li>MongoDB</li>
                 </ul>
             </div>
             <div className="technologies">

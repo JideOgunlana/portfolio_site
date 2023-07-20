@@ -5,9 +5,7 @@ const Footer = () => {
     return (
         <>
             <div className="social-links">
-                <div>
-                    Jide_O
-                </div>
+
                 <div>
                     LinkedIn
                 </div>

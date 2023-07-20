@@ -2,8 +2,9 @@
     /* border: 5px solid white; */
     display: flex;
     flex-direction: column;
-    width: 400px;
+    /* width: 400px; */
     height: 400px;
+    /* justify-self: center; */
     background-color: rgb(28, 29, 30);
     /* margin: 0 auto; */
     color: var(--custom-black);
@@ -36,4 +37,21 @@
     40px 0px 70px var(--custom-grey),
     -40px 0px 70px var(--custom-grey);
 
+}
+
+
+.card-text h3 {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.card-text p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 5px 10px;
+}
+
+.card-text h3,
+.card-text p {
+    margin: 0;
 }

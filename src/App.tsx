@@ -5,6 +5,7 @@ const App = () => {
 
     const [aboutMe, setAboutMe] = useState<boolean>(false);
     return (
+        <>
         <div className="app-container">
             <header className="header">
                 <Header 
@@ -17,10 +18,13 @@ const App = () => {
                     aboutMe ? <About /> : <Main />
                 }
             </main>
-            <footer>
-                <Footer />
-            </footer>
         </div>
+        <footer>
+            <div className="footer-container">
+                <Footer />
+            </div>
+        </footer>
+        </>
     );
 }
 

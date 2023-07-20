@@ -19,25 +19,18 @@ const Card: React.FC<CardProps> = ({title, content, source}) => {
             <div className="card-image">
                 <div 
                     style={
-                        cardHoverState ?
                         {
                             background: `URL(${source})`, 
                             backgroundSize: "cover", 
-                            backgroundPosition: "center",
-                            transition: "0.5s"
-                        }
-                        :
-                        {
-                            background: `URL(${source})`, 
-                            backgroundSize: "cover",
-                            transition: "1s"
+                            transition: "1s",
+                            backgroundPosition: cardHoverState ? "center" : ""
                         }
                     }
                 >
                 </div>
             </div>
             <div className="card-text">
-                {title}
+                <h3>{title}</h3>
                 <p>
                     {content}
                 </p>

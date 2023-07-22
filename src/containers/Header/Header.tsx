@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({aboutMe, setAboutMe}) => {
                 {
                     !aboutMe ?
                     <button onClick={handleAboutMe}>
-                        About me
+                        About
                     </button>
                     :
                     ""

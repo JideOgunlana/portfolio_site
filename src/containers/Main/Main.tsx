@@ -56,9 +56,9 @@ const Main = () => {
                 />
             </div>
             <div className="technologies">
-                <h3>
-                    Tech Skills:
-                </h3>
+                <h2>
+                    Tech Skills
+                </h2>
                 <ul>
                     <li>C</li>
                     <li>C++</li>

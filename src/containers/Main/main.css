@@ -2,6 +2,12 @@ main .col p {
     font-weight: 200;
 }
 
+main h2 {
+    text-decoration: underline;
+    text-decoration-color: var(--custom-blue);
+    text-decoration-thickness: 4px;
+}
+
 @keyframes circle_rotations {
     0% {transform: rotate(30deg);}
     20% {transform: rotate(60deg);}

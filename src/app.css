@@ -61,6 +61,9 @@ main .featured-projects {
     grid-template-columns: 1fr;
     gap: 10px;
 }
+main .featured-projects .card {
+    cursor: pointer;
+}
 
 main .col{
     margin-bottom: 80px;

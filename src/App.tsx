@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import {Header, Main, Footer, About} from "./containers/";
+import {Header, Main, Footer, Projects} from "./containers/";
 import "./app.css";
 const App = () => {
 
-    const [aboutMe, setAboutMe] = useState<boolean>(false);
+    const [myProjects, setMyProjects] = useState<boolean>(false);
     return (
         <>
         <div className="app-container">
             <header className="header">
                 <Header 
-                    setAboutMe={setAboutMe}
-                    aboutMe={aboutMe}
+                    setMyProjects={setMyProjects}
+                    myProjects={myProjects}
                 />
             </header>
             <main>
                 {
-                    aboutMe ? <About /> : <Main />
+                    myProjects ? <Projects /> : <Main />
                 }
             </main>
         </div>

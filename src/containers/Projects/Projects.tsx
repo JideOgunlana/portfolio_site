@@ -1,11 +1,11 @@
 import React from "react";
 
-const About = () => {
+const Projects = () => {
     return (
         <>
-            About
+            Projects
         </>
     );
 }
 
-export default About;
+export default Projects;

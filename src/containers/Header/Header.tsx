@@ -2,16 +2,16 @@ import React from "react";
 import "./header.css";
 
 type HeaderProps = {
-    aboutMe: boolean;
-    setAboutMe: React.Dispatch<React.SetStateAction<boolean>>;
+    myProjects: boolean;
+    setMyProjects: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header: React.FC<HeaderProps> = ({aboutMe, setAboutMe}) => {
-    const handleAboutMe = (e:any) => {
+const Header: React.FC<HeaderProps> = ({myProjects, setMyProjects}) => {
+    const handlemyProjects = (e:any) => {
         if (e.target.className === "nav-brand")
-            setAboutMe(false);
+            setMyProjects(false);
         else
-            setAboutMe(true);
+            setMyProjects(true);
     }
 
     return (
@@ -19,14 +19,14 @@ const Header: React.FC<HeaderProps> = ({aboutMe, setAboutMe}) => {
             <nav>
                 <h2 
                     className="nav-brand"
-                    onClick={(e:any) => handleAboutMe(e)}
+                    onClick={(e:any) => handlemyProjects(e)}
                 >
                     Jide_O
                 </h2>
                 {
-                    !aboutMe ?
-                    <button onClick={handleAboutMe}>
-                        About
+                    !myProjects ?
+                    <button onClick={handlemyProjects}>
+                        View Projects
                     </button>
                     :
                     ""

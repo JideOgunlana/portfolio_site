@@ -22,15 +22,17 @@ const Main = () => {
                 <p>
                     Passionate software developer with a relentless pursuit of excellence, dedicated to delivering impactful user experiences through innovative solutions.
                 </p>
-                <div>
+{/*                 <div>
                     <button>View Projects</button>
-                </div>
+                </div> */}
             </div>
             <div className="col profile-image">
                 <Card 
-                title={""} 
-                content={"This is some info about me"}
-                source={me} />
+                    title={""} 
+                    content={"This is some info about me"}
+                    source={me}
+                    targetLink="#"
+                />
             </div>
             <div>
                 <h2>
@@ -41,18 +43,22 @@ const Main = () => {
                 <Card title="So_Long" 
                     content={"A top-down 2D game written in C"} 
                     source={imgSoLong}
+                    targetLink="https://github.com/JideOgunlana/42_solong"
                 />
                 <Card title="Push_Swap" 
                     content={"A sorting algroithm project having limited instructions"} 
                     source={imgPushSwap}
+                    targetLink="https://github.com/JideOgunlana/push_swap"
                 />
                 <Card title="Age Calculator app" 
                     content={"A React app to calculate age"} 
                     source={imgAgeCalc}
+                    targetLink="https://github.com/JideOgunlana/age_calculator_app"
                 />
                 <Card title="Advent of code in React" 
                     content={"An algorithm coding challenge developed in React"} 
                     source={imgAoc}
+                    targetLink="https://github.com/JideOgunlana/advent_of_Code_2022/tree/spa_advent_of_code"
                 />
             </div>
             <div className="technologies">
@@ -74,16 +80,16 @@ const Main = () => {
             <div className="technologies">
                 <div className="circle">
                     <div className="images">
-                        <img src={imgC} width={40} />
+                        <img src={imgC} alt="C" width={40} />
                     </div>
                     <div className="images">
-                        <img src={imgJS} width={40} />
+                        <img src={imgJS} alt="JS" width={40} />
                     </div>
                     <div className="images">
-                        <img src={imgHTML} width={40} />
+                        <img src={imgHTML} alt="HTML" width={40} />
                     </div>
                     <div className="images">
-                        <img src={imgGit} width={40} />
+                        <img src={imgGit} alt="Git" width={40} />
                     </div>
                 </div>
             </div>

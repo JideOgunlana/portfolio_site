@@ -23,10 +23,19 @@ h2 {
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
+    row-gap: 40px;
 }
 
 header {
     /* border: 1px solid green; */
+    position: sticky;
+    top: 0;
+    background-color: var(--custom-black);
+    opacity: 0.9;
+}
+
+main {
+    min-height: 80vh;
 }
 
 button {

@@ -11,8 +11,9 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({title, content, source, targetLink}) => {
     const [cardHoverState, setCardHoverState] = useState(false);
 
-    const handleClick = () => {
-        if (targetLink !== "#") {
+    const handleClick = (e:any) => {
+        e.stopPropagation()
+        if (targetLink !== "#" && targetLink !== "") {
             window.open(targetLink, "_blank");
         }
     }
@@ -22,7 +23,7 @@ const Card: React.FC<CardProps> = ({title, content, source, targetLink}) => {
             className="card"
             onMouseEnter={() => setCardHoverState(true)}
             onMouseLeave={() => setCardHoverState(false)}
-            onClick={handleClick}
+            onClick={(e:any) => handleClick(e)}
         >
             <div className="card-image">
                 <div 

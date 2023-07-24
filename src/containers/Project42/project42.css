@@ -1,0 +1,22 @@
+.back_button {
+    width: 80px;
+    height: 80px;
+    background-color: var(--custom-white);
+    position: absolute;
+    right: 20px;
+    border-radius: 50% 50%;
+    color: var(--custom-black);
+    text-align: center;
+    top: 40px;
+}
+
+.back_button:hover {
+    background-color: var(--custom-blue);
+    cursor: pointer;
+}
+
+.project {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}

@@ -1,3 +1,24 @@
+
 .projects {
-    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    grid-column: span 2;
+    gap: 30px;
+}
+
+.projects .card {
+    width: 350px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 760px) {
+    .projects {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width:1600px) {
+
 }

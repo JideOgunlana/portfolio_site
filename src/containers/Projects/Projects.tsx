@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Card  from "../../components/Card/Card";
-import { Project42 } from "../";
+import { Project42, ProjectFM, ProjectSelf } from "../";
 import "./projects.css";
 
 type CategoriesProps = {
@@ -40,32 +40,34 @@ const Categories: React.FC<CategoriesProps> = ({handleClick}) => {
 
 const Projects = () => {
     const [viewProject, setViewProject] = useState<string>("");
+    const [backtoProjectsPage, setBackToProjectsPage] = useState<boolean>(false);
 
     const handleClick = (page:string) => {
         setViewProject(page);
+        setBackToProjectsPage(false);
     }
 
     return (
         <div className="projects">
             {
-                viewProject === "" ? 
+                viewProject === "" || backtoProjectsPage === true ? 
                 <Categories 
                     handleClick={handleClick}
                 />
                 :
                 viewProject === "project42" ?
-                <div>
-                    <Project42 />
+                <div  className="project42-container" >
+                    <Project42 setBackToProjectsPage={setBackToProjectsPage}/>
                 </div>
                 :
                 viewProject === "projectFM" ?
                 <div>
-                    this is the FM page
+                    <ProjectFM setBackToProjectsPage={setBackToProjectsPage} />
                 </div>
                 :
                 viewProject === "projectSelf" ?
                 <div>
-                    This is project Self
+                   <ProjectSelf setBackToProjectsPage={setBackToProjectsPage} />
                 </div>
                 :
                 null

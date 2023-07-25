@@ -8,6 +8,12 @@
     background-color: rgb(28, 29, 30);
     /* margin: 0 auto; */
     color: var(--custom-black);
+    transition: 0.5s;
+}
+
+.card:hover {
+    box-shadow: -12px 12px 1px var(--custom-blue);
+    transition: 0.7s;
 }
 
 .card-image {

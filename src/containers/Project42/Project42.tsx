@@ -28,6 +28,13 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
     return (
         <>
             <BackButton setBackToProjectsPage={setBackToProjectsPage} />
+            <div className="title-container">
+                <div className="titleLine"></div>
+                    <p className="title">
+                        Projects from school 42
+                    </p>
+                <div className="titleLine"></div>
+            </div>
             <div className="levels level-0">
                 <div className="project42 completed">
                     <img src={library} alt="library" />

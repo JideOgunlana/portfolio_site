@@ -8,15 +8,17 @@
 }
 
 .project42 {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     background-color: white;
     border-radius: 50%;
     color: var(--custom-black);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: ease-in-out 0.6s;
+    text-align: center;
 }
 
 .project42.project42.completed:hover {
@@ -34,4 +36,22 @@
 
 .project42.not-started {
     border: 8px solid var(--custom-grey);
+}
+
+.levels {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.down-arrow {
+    /* border: 1px solid var(--custom-blue); */
+}
+.down-arrow img {
+    width: 70px;
+}
+
+.levels img{
+    width: 32px;
 }

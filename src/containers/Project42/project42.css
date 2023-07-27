@@ -21,7 +21,7 @@
     text-align: center;
 }
 
-.project42.project42.completed:hover {
+.project42.completed:hover {
     border: 40px outset var(--custom-blue);
     cursor: pointer;
 }
@@ -54,4 +54,67 @@
 
 .levels img{
     width: 32px;
+}
+
+.project-summary {
+    position: relative;
+    display: inline-block;
+}
+
+.project-summary .tool-tip {
+    visibility: hidden;
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    color: #fff;
+    padding: 1rem;
+    border: 1px solid red;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    color: black;
+}
+
+.project-summary .tool-tip::after {
+    content: " ";
+    position: absolute;
+    /* top: 25%; */
+    /*right: 100%;*/ /* To the left of the tooltip */
+    bottom: 100%;
+    left: 10%;
+    transform: rotate(90deg);
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+.level-6 .project-summary {
+    transform: translate(200px, -350px);
+}
+
+.level-6 .project-summary .tool-tip::after {
+    content: " ";
+    position: absolute;
+    bottom: 10%;
+    left: -10px;
+    /* right: 150%; */ /* To the left of the tooltip */
+    /* bottom: 100%; */
+    transform: rotate(0deg);
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+.project42:hover ~ .project-summary .tool-tip{
+    visibility: visible;
+}
+
+.tool-tip div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

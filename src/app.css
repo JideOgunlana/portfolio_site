@@ -68,8 +68,9 @@ main .featured-projects {
     grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 30px;
 }
+
 main .featured-projects .card {
     cursor: pointer;
 }
@@ -89,6 +90,9 @@ footer {
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 @media screen and (min-width: 760px) {
@@ -99,6 +103,7 @@ footer {
     }
 
     .footer-container {
+        flex-direction: row;
         width: 80%;
     }
 
@@ -124,9 +129,6 @@ footer {
         justify-content: space-between;
         gap: 20px;
     }
-    
-    
-
 }
 
 @media screen and (min-width: 1600px) {
@@ -137,5 +139,6 @@ footer {
 
     main .featured-projects {
         grid-template-columns: repeat(4, 22%);
+        gap: 15px;
     }
 }

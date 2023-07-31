@@ -28,16 +28,16 @@ type ProjectCircleProps = {
     projectTitle?: string; // optional, only for the first circle in each category to show its
     projectImg: string;
     imgAltText: string;
-    myClass: string;
+    project42Class: string;
 }
 
 type ProjectSummaryProps = {
     summaryContent: string;
 }
 
-const ProjectCircle: React.FC<ProjectCircleProps> = ({projectTitle, projectImg, imgAltText, myClass}) => {
+const ProjectCircle: React.FC<ProjectCircleProps> = ({projectTitle, projectImg, imgAltText, project42Class}) => {
     return (
-        <div className={myClass}>
+        <div className={project42Class}>
             <img src={projectImg} alt={imgAltText} />
             {projectTitle}
         </div>
@@ -62,9 +62,31 @@ const ProjectSummary: React.FC<ProjectSummaryProps> = ({summaryContent}) => {
 
 
 const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
+
+    const handleClick = (targetLink:string) => {
+        if (targetLink !== "#" && targetLink !== "") {
+            window.open(targetLink, "_blank");
+        }
+    }
+
     return (
         <>
             <BackButton setBackToProjectsPage={setBackToProjectsPage} />
+            <div className="project-status">
+                <h5>
+                    Project status
+                </h5>
+                <div className="status-names">
+                    <div className="status-name">Completed</div>
+                    <div className="status-name">In progress</div>
+                    <div className="status-name">Not started</div>
+                </div>
+                <div className="status-colors">
+                    <div className="status-color"></div>
+                    <div className="status-color"></div>
+                    <div className="status-color"></div>
+                </div>
+            </div>
             <div className="title-container">
                 <div className="titleLine"></div>
                     <p className="title">
@@ -73,8 +95,8 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
                 <div className="titleLine"></div>
             </div>
             <div className="levels level-0">
-                <div>
-                    <ProjectCircle projectTitle="libft" projectImg={library} imgAltText="library"  myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_libft")}>
+                    <ProjectCircle projectTitle="libft" projectImg={library} imgAltText="library"  project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is libft"/>
                 </div>
             </div>
@@ -82,16 +104,16 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
                 <img src={downArrow} alt="down arrow" />
             </div>
             <div className="levels level-1">
-                <div>
-                    <ProjectCircle projectTitle="gnl" projectImg={menu} imgAltText="lines"  myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_get_next_line")}>
+                    <ProjectCircle projectTitle="gnl" projectImg={menu} imgAltText="lines"  project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is gnl" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="ft_printf" projectImg={terminal} imgAltText="terminal"  myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_printf")}>
+                    <ProjectCircle projectTitle="ft_printf" projectImg={terminal} imgAltText="terminal"  project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is ft_printf" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="b2broot" projectImg={os} imgAltText="operating system"  myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("#")}>
+                    <ProjectCircle projectTitle="b2broot" projectImg={os} imgAltText="operating system"  project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is Born2beroot" />
                 </div>
             </div>
@@ -99,16 +121,16 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
                 <img src={downArrow} alt="down arrow" />
             </div>
             <div className="levels level-2">
-                <div>
-                    <ProjectCircle projectTitle="push_swap" projectImg={algorithm} imgAltText="algorithm"  myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/push_swap")}>
+                    <ProjectCircle projectTitle="push_swap" projectImg={algorithm} imgAltText="algorithm"  project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is push_swap" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="so_long" projectImg={joystick} imgAltText="joystick"  myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_solong")}>
+                    <ProjectCircle projectTitle="so_long" projectImg={joystick} imgAltText="joystick"  project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is so_long" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="minitalk" projectImg={ipc} imgAltText="Inter Process Communication" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_minitalk")}>
+                    <ProjectCircle projectTitle="minitalk" projectImg={ipc} imgAltText="Inter Process Communication" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is minitalk" />
                 </div>
             </div>
@@ -116,12 +138,12 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
                 <img src={downArrow} alt="down arrow" />
             </div>
             <div className="levels level-3">
-                <div>
-                    <ProjectCircle projectTitle="minishell" projectImg={bash} imgAltText="bash shell" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/larskrabbe/minishell")}>
+                    <ProjectCircle projectTitle="minishell" projectImg={bash} imgAltText="bash shell" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is minishell" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="philosophers" projectImg={philo} imgAltText="philosopher" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_philosophers")}>
+                    <ProjectCircle projectTitle="philosophers" projectImg={philo} imgAltText="philosopher" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is philosophers" />
                 </div>
             </div>
@@ -129,16 +151,16 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
                 <img src={downArrow} alt="down arrow" />
             </div>
             <div className="levels level-4">
-                <div>
-                    <ProjectCircle projectTitle="netpractice" projectImg={networks} imgAltText="networks" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("#")}>
+                    <ProjectCircle projectTitle="netpractice" projectImg={networks} imgAltText="networks" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is netpractice" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="Cub3D" projectImg={cube} imgAltText="cube" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/UGOI/cub3d")}>
+                    <ProjectCircle projectTitle="Cub3D" projectImg={cube} imgAltText="cube" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is Cub3D" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="cpp_modules" projectImg={cpp} imgAltText="cpp file" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_CPP_Modules")}>
+                    <ProjectCircle projectTitle="cpp_modules" projectImg={cpp} imgAltText="cpp file" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is CPP 0-4" />
                 </div>
             </div>
@@ -146,16 +168,16 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
                 <img src={downArrow} alt="down arrow" />
             </div>
             <div className="levels level-5">
-                <div>
-                    <ProjectCircle projectTitle="inception" projectImg={containers} imgAltText="containers" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_Inception")}>
+                    <ProjectCircle projectTitle="inception" projectImg={containers} imgAltText="containers" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is Inception" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="ft_irc" projectImg={chat} imgAltText="chat bubble" myClass={"project42 in-progress"}/>
+                <div className="levels-content" onClick={() => handleClick("#")}>
+                    <ProjectCircle projectTitle="ft_irc" projectImg={chat} imgAltText="chat bubble" project42Class={"project42 in-progress"}/>
                     <ProjectSummary summaryContent="This is ft_irc" />
                 </div>
-                <div>
-                    <ProjectCircle projectTitle="cpp_modules" projectImg={cpp} imgAltText="cpp file" myClass={"project42 completed"}/>
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/42_CPP_Modules")}>
+                    <ProjectCircle projectTitle="cpp_modules" projectImg={cpp} imgAltText="cpp file" project42Class={"project42 completed"}/>
                     <ProjectSummary summaryContent="This is CPP 5-9" />
                 </div>
             </div>
@@ -163,8 +185,8 @@ const Project42: React.FC<Project42Props> = ({setBackToProjectsPage}) => {
                 <img src={downArrow} alt="down arrow" />
             </div>
             <div className="levels level-6">
-                <div>
-                    <ProjectCircle projectTitle="transcendence" projectImg={pingPong} imgAltText="2D ping pong game" myClass={"project42 not-started"}/>
+                <div className="levels-content" onClick={() => handleClick("#")}>
+                    <ProjectCircle projectTitle="transcendence" projectImg={pingPong} imgAltText="2D ping pong game" project42Class={"project42 not-started"}/>
                     <ProjectSummary summaryContent="This is transcendence" />
                 </div>
             </div>

@@ -8,8 +8,8 @@
 }
 
 .project42 {
-    width: 180px;
-    height: 180px;
+    width: 90px;
+    height: 90px;
     background-color: white;
     border-radius: 50%;
     color: var(--custom-black);
@@ -22,7 +22,7 @@
 }
 
 .project42.completed:hover {
-    border: 40px outset var(--custom-blue);
+    border: 20px outset var(--custom-blue);
     cursor: pointer;
 }
 
@@ -49,33 +49,41 @@
     /* border: 1px solid var(--custom-blue); */
 }
 .down-arrow img {
-    width: 70px;
+    width: 50px;
+}
+
+.levels {
+    font-size: 0.625rem /* 10px */;
 }
 
 .levels img{
-    width: 32px;
+    width: 16px;
+}
+
+.levels-content {
+
 }
 
 .project-summary {
-    position: relative;
-    display: inline-block;
+    display: none;
+    /* border: 1px solid red; */
 }
 
 .project-summary .tool-tip {
     visibility: hidden;
-    width: 500px;
-    height: 250px;
-    background-color: white;
+    /* width: 500px; */
+    width: 270px;
+    height: 350px;
+    background-color: var(--custom-grey);
     color: #fff;
     padding: 1rem;
-    border: 1px solid red;
     border-radius: 6px;
    
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
-    color: black;
 }
+
 
 .project-summary .tool-tip::after {
     content: " ";
@@ -88,7 +96,7 @@
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--custom-grey) transparent transparent;
 }
 
 .level-6 .project-summary {
@@ -106,15 +114,92 @@
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--custom-grey) transparent transparent;
 }
 
-.project42:hover ~ .project-summary .tool-tip{
-    visibility: visible;
-}
 
 .tool-tip div {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.status-names {
+    display: flex;
+    gap: 20px;
+    font-size: 0.75rem;
+    /* border: 1px solid red; */
+}
+
+.status-names div:nth-child(odd) {
+    /* background-color: white; */
+    /* color: black; */
+}
+
+.status-colors {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content:space-around;
+}
+
+.status-colors .status-color {
+    height: 20px;
+    width: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.status-color:nth-child(1) {
+    background-color: var(--custom-blue);
+}
+
+.status-color:nth-child(2) {
+    background-color: var(--custom-green);
+}
+
+.status-color:nth-child(3) {
+    background-color: var(--custom-grey);
+}
+
+
+@media screen and (min-width: 760px) {
+    .project42 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .down-arrow img {
+        width: 70px;
+    }
+
+    .levels img{
+        width: 32px;
+    }
+
+    .levels {
+        font-size: 1rem;
+    }
+
+    .project-summary {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .project42.completed:hover {
+        border: 40px outset var(--custom-blue);
+    }
+
+    .project42:hover ~ .project-summary .tool-tip{
+        visibility: visible;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1600px) {
+    .project-summary .tool-tip {
+        width: 500px;
+    }
 }

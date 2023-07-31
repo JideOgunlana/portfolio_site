@@ -6,8 +6,8 @@
     border-radius: 50% 50%;
     text-align: center;
     display: flex;
-    left: 50px;
-    top: 100px;
+    right: 30px;
+    top: 25px;
     align-items: center;
     justify-content: center;
 }
@@ -24,4 +24,12 @@
 .backButton:hover img{
     transform: translateX(-5px);
     transition: 1s;
+}
+
+
+@media screen and (min-width: 760px) {
+    .backButton {
+        left: 10%;
+        top: 100px;
+    }
 }

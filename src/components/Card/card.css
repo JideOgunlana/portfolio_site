@@ -12,7 +12,7 @@
 }
 
 .card:hover {
-    box-shadow: -12px 12px 1px var(--custom-blue);
+    box-shadow: -12px 12px var(--custom-blue);
     transition: 0.7s;
 }
 

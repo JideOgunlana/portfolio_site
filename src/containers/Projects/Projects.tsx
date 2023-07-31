@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import Card  from "../../components/Card/Card";
 import { Project42, ProjectFM, ProjectSelf } from "../";
 import "./projects.css";
+import logo42 from "../../assets/images/42logo.jpg";
+import logoFM from "../../assets/images/frontend-mentor.png";
+import idea from "../../assets/images/idea.png"
 
 type CategoriesProps = {
     handleClick:(categoryName: string)=>void;
@@ -14,7 +17,7 @@ const Categories: React.FC<CategoriesProps> = ({handleClick}) => {
                     <Card 
                         title="42 Projects"
                         content="A list of projects from school 42"
-                        source=""
+                        source={logo42}
                         targetLink="#"
                     />
                 </div>
@@ -22,7 +25,7 @@ const Categories: React.FC<CategoriesProps> = ({handleClick}) => {
                     <Card
                         title="Frontend mentor Projects"
                         content="A list of projects from frontend mentor"
-                        source=""
+                        source={logoFM}
                         targetLink="#"
                     />
                 </div>
@@ -30,7 +33,7 @@ const Categories: React.FC<CategoriesProps> = ({handleClick}) => {
                     <Card
                         title="My personal projects"
                         content="A list of self inspired projects"
-                        source=""
+                        source={idea}
                         targetLink="#"
                     />
                 </div>

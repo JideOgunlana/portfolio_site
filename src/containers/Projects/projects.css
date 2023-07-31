@@ -14,21 +14,29 @@
 }
 
 .title-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    justify-content: center;
+    text-align: center;
 }
+
 
 .titleLine {
     border-top: 2px solid var(--custom-grey);
-    width: 12%;
 }
 
 @media screen and (min-width: 760px) {
     .projects {
         grid-column: span 2;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .titleLine {
+        width: 12%;
     }
 }
 

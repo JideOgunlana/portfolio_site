@@ -15,7 +15,7 @@ const App = () => {
             </header>
             <main>
                 {
-                    myProjects ? <Projects /> : <Main />
+                    myProjects ? <Projects /> : <Main setMyProjects={setMyProjects} myProjects={myProjects} />
                 }
             </main>
         </div>

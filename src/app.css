@@ -21,7 +21,7 @@ h2 {
     padding: 10px 10px;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    /* width: 80%; */
     margin: 0 auto;
     row-gap: 40px;
 }
@@ -42,7 +42,7 @@ button {
     width: 170px;
     padding: 10px;
     font-weight: 500;
-    border: 1px solid var(--custom-blue);
+    border: 1px solid var(--custom-green);
     background-color: var(--custom-blue);
     cursor: pointer;
     transition: 0.6s;
@@ -51,8 +51,8 @@ button {
 
 button:hover {
     background-color: var(--custom-black);
-    color: var(--custom-blue);
-    box-shadow: 4px 4px var(--custom-blue);
+    color: var(--custom-green);
+    box-shadow: 4px 4px var(--custom-gold);
     transition: 0.3s;
 }
 
@@ -98,13 +98,17 @@ footer {
 @media screen and (min-width: 760px) {
 
     .app-container {
-        width: 80%;
+        width: 60%;
         row-gap: 100px;
+    }
+
+    footer {
+        width: 60%;
+        margin: 0 auto;
     }
 
     .footer-container {
         flex-direction: row;
-        width: 80%;
     }
 
     main {
@@ -138,7 +142,7 @@ footer {
     }
 
     main .featured-projects {
-        grid-template-columns: repeat(4, 22%);
-        gap: 15px;
+        grid-template-columns: repeat(3, 30%);
+        gap: 50px 15px;
     }
 }

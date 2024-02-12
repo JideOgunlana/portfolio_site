@@ -6,31 +6,21 @@ type HeaderProps = {
     setMyProjects: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header: React.FC<HeaderProps> = ({myProjects, setMyProjects}) => {
-    const handlemyProjects = (e:any) => {
-        if (e.target.className === "nav-brand")
+const Header: React.FC<HeaderProps> = ({setMyProjects, myProjects}) => {
+    const navToHome = (e:any) => {
+        if (e.target.className.includes("nav-brand"))
             setMyProjects(false);
-        else
-            setMyProjects(true);
     }
 
     return (
         <>
             <nav>
                 <h2 
-                    className="nav-brand"
-                    onClick={(e:any) => handlemyProjects(e)}
+                    className={myProjects ? `nav-brand in-projects` : `nav-brand`}
+                    onClick={(e:any) => navToHome(e)}
                 >
                     Jide_O
                 </h2>
-                {
-                    !myProjects ?
-                    <button onClick={handlemyProjects}>
-                        View Projects
-                    </button>
-                    :
-                    ""
-                }
             </nav>
         </>
     )

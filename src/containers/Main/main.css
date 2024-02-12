@@ -1,60 +1,20 @@
-main .col p {
+.col p {
     font-weight: 200;
 }
 
-@keyframes circle_rotations {
-    0% {transform: rotate(30deg);}
-    20% {transform: rotate(60deg);}
-    40% {transform: rotate((90deg));}
-    60% {transform: rotate((120deg));}
-    80% {transform: rotate((-60deg));}
-    100% {transform: rotate(0deg);}
+h2 {
+    text-decoration: underline;
+    text-decoration-color: var(--custom-green);
+    text-decoration-thickness: 4px;
 }
 
-.circle {
-    height: 300px;
-    aspect-ratio: 1/1;
-    border: 3px dashed red;
-    border-radius: 50% 50%;
-    position: relative;
-    transition: 0.6s;
-    margin: 0 auto;
-}
-
-.circle:hover {
-    animation-name: circle_rotations;
-    animation-duration: 6s;
-    transition: 0.6s
-}
-
-.circle div.images {
-    position: absolute;
-}
-
-div.images:nth-child(1) {
-    left: 0px;
-    /* transform: translate(-50%, -50%);
-     */
-    transform: translate(-5px, 25px);
-}
-
-div.images:nth-child(2) {
-    right: 0px;
-    /* transform: translate(50%, -50%); */
-    transform: translate(0px, 25px)
-}
-div.images:nth-child(3) {
-    bottom: 0px;
-    left: 0px;
-    /* transform: translate(50%, 50%); */
-    transform: translate(-5px, -25px)
-}
-div.images:nth-child(4) {
-    bottom: 0px;
-    right: 0px;
-    /* transform: translate(50%, 50%); */
-    transform: translate(0px, -25px);
-
+.svg-container {
+    width: 14px;
+    height: 14px;
+    /* border: 1px solid red; */
+    /* border-radius: 5px; */
+    display: inline-block;
+    overflow: hidden;
 }
 
 .technologies {
@@ -75,3 +35,82 @@ div.images:nth-child(4) {
     list-style-type: circle;
     line-height: 2rem;
 }
+
+.orbit {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 100px;
+  }
+  
+  .orbit-line {
+    position: absolute;
+    /* border: dashed 3px var(--custom-green); */
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .planet {
+    display: block;
+    width: 50px;
+    height: 50px;
+    /* background-color: var(--custom-grey); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    border-radius: 50%;
+    animation: rotationCW 5s infinite linear;
+  }
+  
+  .planet1 {
+    animation-delay: 0s;
+  }
+  
+  .planet2 {
+    animation-delay: 0.5s;
+  }
+  
+  .planet3 {
+    animation-delay: 1s;
+  }
+  
+  .planet4 {
+    animation-delay: 1.5s;
+  }
+
+  .planet5 {
+    animation-delay: 2s;
+  }
+
+  .planet6 {
+    animation-delay: 2.5s;
+  }
+
+  .planet7 {
+    animation-delay: 3s;
+  }
+
+  .planet8 {
+    animation-delay: 3.5s;
+  }
+
+  .planet9 {
+    animation-delay: 4s;
+  }
+
+  .planet10 {
+    animation-delay: 4.5s;
+  }
+  
+  @keyframes rotationCW {
+    from {
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+  

@@ -7,10 +7,10 @@ const Footer = () => {
             <div className="social-links">
 
                 <div>
-                    LinkedIn
+                    <a href="https://www.linkedin.com/in/babajide-ogunlana-44607119b/" target="_blank" rel="noreferrer">LinkedIn</a>
                 </div>
                 <div>
-                    GitHub
+                    <a href="https://github.com/JideOgunlana/" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
             </div>
             <div>

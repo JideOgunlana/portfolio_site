@@ -7,7 +7,20 @@
     /* justify-self: center; */
     background-color: rgb(28, 29, 30);
     /* margin: 0 auto; */
-    color: var(--custom-black);
+    color: black;
+    transition: 0.5s;
+}
+
+/* .card:hover {
+    box-shadow: 12px 12px var(--custom-gold);
+    transition: 0.7s;
+} */
+
+
+.card:hover {
+    box-shadow: 12px 12px var(--custom-gold);
+    transform: scale(1.05);
+    transition: all 0.5s ease;
 }
 
 .card-image {
@@ -20,8 +33,13 @@
 }
 
 .card-text {
-    background-color: rgb(227, 228, 228);
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--custom-white);
     height: 25%;
+}
+
+.card-text h3 {
+    font-family: 'Protest Revolution', sans-serif;
 }
 
 .col .card,
@@ -30,14 +48,12 @@
     border-top-right-radius: 20px;
 }
 
-.col .card {
+.profile-image .card {
     height: 600px;
-    box-shadow: 0px 40px 70px var(--custom-grey),
-    0px -40px 70px var(--custom-grey),
-    40px 0px 70px var(--custom-grey),
-    -40px 0px 70px var(--custom-grey);
-
+    box-shadow: none;
+    transform: none;
 }
+
 
 
 .card-text h3 {
@@ -46,7 +62,7 @@
 }
 
 .card-text p {
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
     font-weight: 300;
     padding: 5px 10px;
 }

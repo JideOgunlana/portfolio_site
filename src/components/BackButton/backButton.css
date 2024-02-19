@@ -1,0 +1,35 @@
+.backButton {
+    width: 50px;
+    height: 50px;
+    /* background-color: var(--custom-white); */
+    position: fixed;
+    border-radius: 50% 50%;
+    text-align: center;
+    display: flex;
+    right: 30px;
+    top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.backButton:hover {
+    cursor: pointer;
+}
+
+.backButton img {
+    width: 30px;
+    transition: 0.5s;
+}
+
+.backButton:hover img{
+    transform: translateX(-5px);
+    transition: 1s;
+}
+
+
+@media screen and (min-width: 760px) {
+    .backButton {
+        left: 10%;
+        top: 100px;
+    }
+}

@@ -2,14 +2,29 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 nav h2 {
     cursor: pointer;
+    text-decoration: none;
 }
 
-nav h2:hover {
-    text-decoration: overline;
-    text-decoration-thickness: 4px;
-    text-decoration-color: var(--custom-blue);
-}
+nav h2.in-projects {
+    position: relative;
+    display: inline-block; 
+  }
+  
+  nav h2.in-projects:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 100%;
+    background: var(--custom-gold);
+    transition: width 0.5s;
+  }
+  
+  nav h2.in-projects:hover:before {
+    width: 100%;
+  }

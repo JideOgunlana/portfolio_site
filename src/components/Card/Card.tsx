@@ -5,16 +5,25 @@ type CardProps = {
     source: string;
     title: string;
     content: string;
+    targetLink: string;
 }
 
-const Card: React.FC<CardProps> = ({title, content, source}) => {
+const Card: React.FC<CardProps> = ({title, content, source, targetLink}) => {
     const [cardHoverState, setCardHoverState] = useState(false);
+
+    const handleClick = (e:any) => {
+        e.stopPropagation()
+        if (targetLink !== "#" && targetLink !== "") {
+            window.open(targetLink, "_blank");
+        }
+    }
 
     return (
         <div 
             className="card"
             onMouseEnter={() => setCardHoverState(true)}
             onMouseLeave={() => setCardHoverState(false)}
+            onClick={(e:any) => handleClick(e)}
         >
             <div className="card-image">
                 <div 

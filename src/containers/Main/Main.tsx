@@ -35,7 +35,19 @@ const Main: React.FC<MainProps> = ({ myProjects, setMyProjects }) => {
                 </h1>
                 <p>
                     <div>
-                        I'm eager to develop and learn Software Development solutions that provide great experiences for every user. I hold a Bachelors degree in Computer 🖥️ Engineering. My passion for this field led me to the peer-to-peer programming institution 42 Heilbronn in Germany 🥨  
+                        I'm eager to develop and learn Software Development solutions that provide great experiences for every user. <br />
+                        I earned a Bachelor's degree in computer 🖥️ Engineering at the University of Lagos,&nbsp;
+                        <div className="svg-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ng" viewBox="0 0 512 512">
+                                <g fill-rule="evenodd" stroke-width="1pt">
+                                    <path fill="#fff" d="M0 0h512v512H0z" />
+                                    <path fill="#008753" d="M341.3 0H512v512H341.3zM0 0h170.7v512H0z" />
+                                </g>
+                            </svg>
+                        </div>
+                        Nigeria. <br />
+                        My interest and passion in software development led me to further my education and skills at the peer-to-peer learning institution, 42 Heilbronn in Germany
+                        🥨  
                         <div className="svg-container">
                         <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-de" viewBox="0 0 512 512">
                             <path fill="#fc0" d="M0 341.3h512V512H0z" />

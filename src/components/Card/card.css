@@ -12,11 +12,11 @@
 }
 
 .card:hover {
-    box-shadow: 20px 30px var(--custom-green);
+    box-shadow: 20px 20px var(--custom-green);
     transform: scale(1.02);
     transition: all 0.5s ease;
     border-bottom-left-radius: 40%;
-    border-bottom-right-radius: 20%;
+    /* border-bottom-right-radius: 20%; */
     border-top-right-radius: 30px;
 }
 
@@ -50,8 +50,6 @@
     box-shadow: none;
     transform: none;
 }
-
-
 
 .card-text h3 {
     font-size: 1rem;

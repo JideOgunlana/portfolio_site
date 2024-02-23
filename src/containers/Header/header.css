@@ -2,7 +2,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 nav h2 {
@@ -12,10 +11,10 @@ nav h2 {
 
 nav h2.in-projects {
     position: relative;
-    display: inline-block; 
+    display: inline-block;
   }
   
-  nav h2.in-projects:before {
+  nav h2.in-projects::before {
     content: "";
     position: absolute;
     width: 0;
@@ -25,6 +24,6 @@ nav h2.in-projects {
     transition: width 0.5s;
   }
   
-  nav h2.in-projects:hover:before {
+  nav h2.in-projects:hover::before {
     width: 100%;
   }

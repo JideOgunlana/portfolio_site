@@ -32,6 +32,8 @@ header {
     top: 0;
     background-color: var(--custom-black);
     opacity: 0.9;
+    z-index: 10000;
+
 }
 
 main {
@@ -114,7 +116,7 @@ footer {
     main {
         /* border: 1px solid orange; */
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 45% 45%;
         grid-auto-rows: minmax(100px, auto);
     }
 
@@ -131,7 +133,7 @@ footer {
         grid-column: span 2;
         grid-template-columns: 50% 50%;
         justify-content: space-between;
-        gap: 20px;
+        gap: 50px 30px;
     }
 }
 

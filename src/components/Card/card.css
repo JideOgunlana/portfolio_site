@@ -11,16 +11,13 @@
     transition: 0.5s;
 }
 
-/* .card:hover {
-    box-shadow: 12px 12px var(--custom-gold);
-    transition: 0.7s;
-} */
-
-
 .card:hover {
-    box-shadow: 12px 12px var(--custom-gold);
-    transform: scale(1.05);
+    box-shadow: 20px 30px var(--custom-green);
+    transform: scale(1.02);
     transition: all 0.5s ease;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 30px;
 }
 
 .card-image {

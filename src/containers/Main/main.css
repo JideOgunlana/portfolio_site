@@ -104,6 +104,12 @@ h2 {
   .planet10 {
     animation-delay: 4.5s;
   }
+
+  .profile-image:has(.card) .card {
+    border: none;
+    transition: none;
+    transform: none;
+  }
   
   @keyframes rotationCW {
     from {

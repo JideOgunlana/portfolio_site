@@ -109,6 +109,11 @@ h2 {
     border: none;
     transition: none;
     transform: none;
+    height: 500px;
+
+    .card-image { height: 100%; }
+
+    .card-text { display: none; }
   }
   
   @keyframes rotationCW {

@@ -39,7 +39,7 @@ const Main: React.FC<MainProps> = ({ myProjects, setMyProjects }) => {
                         I earned a Bachelor's degree in computer 🖥️ Engineering at the University of Lagos,&nbsp;
                         <div className="svg-container">
                             <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ng" viewBox="0 0 512 512">
-                                <g fill-rule="evenodd" stroke-width="1pt">
+                                <g fillRule="evenodd" strokeWidth="1pt">
                                     <path fill="#fff" d="M0 0h512v512H0z" />
                                     <path fill="#008753" d="M341.3 0H512v512H341.3zM0 0h170.7v512H0z" />
                                 </g>

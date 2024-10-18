@@ -41,13 +41,13 @@
 }
 
 .card-text {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--custom-white);
     height: 25%;
 }
 
 .card-text h3 {
-    font-family: 'Protest Revolution', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .col .card,

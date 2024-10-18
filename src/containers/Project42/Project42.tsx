@@ -219,8 +219,8 @@ const Project42: React.FC<Project42Props> = ({ setBackToProjectsPage }) => {
                 <img src={downArrow} alt="down arrow" />
             </div>
             <div className="levels level-6">
-                <div className="levels-content" onClick={() => handleClick("#")}>
-                    <ProjectCircle projectTitle="transcendence" projectImg={pingPong} imgAltText="2D ping pong game" project42Class={"project42 in-progress"} />
+                <div className="levels-content" onClick={() => handleClick("https://github.com/JideOgunlana/transcendence")}>
+                    <ProjectCircle projectTitle="transcendence" projectImg={pingPong} imgAltText="2D ping pong game" project42Class={"project42 completed"} />
                     <ProjectSummary summaryContent="
                         ft_transcendence is a team project. It  involves developing a multi-player pong web game providing delightful and fun experience for players"
                     />

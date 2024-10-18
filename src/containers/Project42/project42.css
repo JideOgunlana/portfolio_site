@@ -22,16 +22,16 @@
 }
 
 .project42.completed:hover {
-    border: 20px outset var(--custom-blue);
+    /* border: 20px solid var(--custom-green); */
     cursor: pointer;
 }
 
 .project42.completed {
-    border: 8px solid var(--custom-blue);
+    border: 8px solid var(--custom-green);
 }
 
 .project42.in-progress {
-    border: 8px solid var(--custom-green)
+    border: 8px solid var(--custom-blue)
 }
 
 .project42.not-started {
@@ -145,11 +145,12 @@
 }
 
 .status-color:nth-child(1) {
-    background-color: var(--custom-blue);
+    background-color: var(--custom-green);
 }
 
 .status-color:nth-child(2) {
-    background-color: var(--custom-green);
+    background-color: var(--custom-blue);
+
 }
 
 .status-color:nth-child(3) {
@@ -182,7 +183,7 @@
     }
 
     .project42.completed:hover {
-        border: 40px outset var(--custom-blue);
+        border: 40px solid var(--custom-green);
     }
 
     .project42:hover ~ .project-summary .tool-tip{

@@ -1,6 +1,6 @@
 import React from "react";
 import "./project42.css";
-import BackButton from "../../components/BackButton/BackButton";
+// import BackButton from "../../components/BackButton/BackButton";
 import downArrow from "../../assets/images/move.png";
 import library from "../../assets/images/book.png";
 import menu from "../../assets/images/menu.png";
@@ -71,7 +71,7 @@ const Project42: React.FC<Project42Props> = ({ setBackToProjectsPage }) => {
 
     return (
         <>
-            <BackButton setBackToProjectsPage={setBackToProjectsPage} />
+            {/* <BackButton setBackToProjectsPage={setBackToProjectsPage} /> */}
             <div className="project-status">
                 <h5>
                     Project status

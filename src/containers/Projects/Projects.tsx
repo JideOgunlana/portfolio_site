@@ -45,7 +45,7 @@ const Categories: React.FC<CategoriesProps> = ({handleClick}) => {
 }
 */
 const Projects = () => {
-    const [viewProject, setViewProject] = useState<string>("");
+    const [viewProject, /*setViewProject*/] = useState<string>("");
     const [backtoProjectsPage, setBackToProjectsPage] = useState<boolean>(false);
 
     // const handleClick = (page:string) => {
